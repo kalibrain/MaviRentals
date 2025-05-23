@@ -4,6 +4,9 @@ import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
+  // <-- this must match your repo slug
+  base: "/MaviRentals/",
+
   plugins: [
     react(),
     runtimeErrorOverlay(),
@@ -16,6 +19,7 @@ export default defineConfig({
         ]
       : []),
   ],
+
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -23,9 +27,12 @@ export default defineConfig({
       "@assets": path.resolve(import.meta.dirname, "attached_assets"),
     },
   },
+
   root: path.resolve(import.meta.dirname, "client"),
+
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    // output directly into docs/
+    outDir: path.resolve(import.meta.dirname, "docs"),
     emptyOutDir: true,
   },
 });
