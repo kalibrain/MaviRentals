@@ -1,0 +1,95 @@
+    Header & Navigation
+
+        Logo & Branding: Top-left “Mavi Rentals LLC” text or SVG logo, ~48 px tall.
+
+        Nav Links: “About Us”, “How It Works”, “Benefits”, “Contact” – smooth-scroll to #about / #how / #benefits / #contact.
+
+        Sticky: Header sticks once scrolled past hero.
+
+        Mobile Menu: Hamburger → slide-in drawer (80% width) with same links; closes on link click or outside tap.
+
+    Hero & Value Prop
+
+        Background: Full-width, dark-overlay photo of Ann Arbor/apartment.
+
+        Headline:
+
+            “We pay quarterly, you never carry vacancy risk.”
+
+        Subtext (≤ 20 words):
+
+            “Annual or multi-year commercial leases for 2–6 month rentals—no % fees, no finder’s fees.”
+
+        Primary CTA:
+
+            Button “Email Us” → mailto:contact@mavirentals.com?subject=Rental%20Inquiry
+
+        Trust Line:
+
+            “UM alums • 2 years • 5 units managed” (small text beneath).
+
+    How It Works & Benefits
+
+        #how: 3-column icon + title + one-line text:
+
+            Lease Terms: “Annual or multi-year commercial lease.”
+
+            Quarterly Rent: “Rents paid quarterly in advance.”
+
+            Vacancy Coverage: “We assume all vacancy risk.”
+
+        #benefits: 4 cards/bullets with short headers:
+
+            No percentage fees
+
+            Furnished & professionally cleaned
+
+            Walking distance to downtown & UM
+
+            Flexible 2–6 month stays
+
+            Each has a “Learn More” tooltip/modal.
+
+    Contact & Conversion
+
+        #contact:
+
+            Request Email:
+
+                “Ready to partner? Email us at contact@mavirentals.com with:
+                • Your name
+                • Property address
+                • Desired term (2 mo / 3 mo / 6 mo / multi-year)
+                • Any questions”
+
+            Email CTA: Prominent “Email Us” button (mailto:).
+
+        Footer:
+
+            “UM alumni • Ann Arbor, MI”
+
+            Minimal LinkedIn icon linking to your company page
+
+            Copyright notice.
+
+Non-Functional & Tech
+
+    Static HTML only; no backend.
+
+    Styling: Tailwind CSS (via CDN or build).
+
+    JS: Vanilla or minimal (Alpine.js or Smooth-Scroll) for nav toggle & smooth scroll.
+
+    Responsive: Breakpoints at 320 px / 768 px / 1024 px.
+
+    Perf: Lazy-load images, minify CSS/JS, inline critical CSS.
+
+    SEO & A11y:
+
+        <meta> title “Mavi Rentals LLC – Quarterly Rent, Zero Vacancy Risk” & description ≤ 160 chars.
+
+        alt on images; proper <h1>, <h2> hierarchy.
+
+    Analytics: Optional GA snippet.
+
+    Browser: Latest Chrome, Safari, Firefox, Edge.
