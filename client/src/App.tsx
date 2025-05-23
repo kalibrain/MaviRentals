@@ -1,12 +1,13 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import { useHashLocation } from "./hooks/useHashLocation";
 
-function Router() {
+function RouterView() {
   return (
     <Switch>
       <Route path="/" component={Home} />
@@ -20,7 +21,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <WouterRouter hook={useHashLocation}>
+          <RouterView />
+        </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
