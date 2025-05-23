@@ -1,0 +1,92 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 210 40% 15%; /* #1F2937 */
+  --muted: 210 40% 95%;
+  --muted-foreground: 210 25% 45%; /* #6B7280 */
+  --popover: 0 0% 100%;
+  --popover-foreground: 210 40% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 210 40% 15%;
+  --border: 210 40% 90%;
+  --input: 210 40% 90%;
+  --primary: 220 91% 46%; /* #1E40AF */
+  --primary-foreground: 211 100% 99%;
+  --secondary: 158 64% 40%; /* #059669 */
+  --secondary-foreground: 0 0% 98%;
+  --accent: 38 92% 50%; /* #F59E0B */
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 60 9% 98%;
+  --ring: 220 91% 46%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 210 40% 15%;
+  --foreground: 0 0% 98%;
+  --muted: 210 40% 20%;
+  --muted-foreground: 210 25% 65%;
+  --popover: 210 40% 15%;
+  --popover-foreground: 0 0% 98%;
+  --card: 210 40% 15%;
+  --card-foreground: 0 0% 98%;
+  --border: 210 40% 25%;
+  --input: 210 40% 25%;
+  --primary: 220 91% 46%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 158 64% 40%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 38 92% 50%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 210 40% 85%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu.active {
+    transform: translateX(0);
+  }
+
+  .sticky-header {
+    transition: all 0.3s ease;
+  }
+
+  .sticky-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+}
