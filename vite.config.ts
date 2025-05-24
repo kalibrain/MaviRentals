@@ -5,7 +5,7 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
   // <-- this must match your repo slug
-  base: "/MaviRentals/",
+  base: "./",
 
   plugins: [
     react(),
