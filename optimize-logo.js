@@ -15,8 +15,9 @@ async function optimizeLogo() {
       return;
     }
     
-    // Optimize the logo
+    // Optimize the logo with trimming and cropping
     await sharp(inputPath)
+      .trim() // Automatically remove whitespace/background around the logo
       .resize(400, null, { // Resize to max width 400px, maintain aspect ratio
         withoutEnlargement: true
       })
@@ -35,10 +36,11 @@ async function optimizeLogo() {
     const optimizedSize = (optimizedStats.size / 1024).toFixed(2);
     const savings = ((1 - optimizedStats.size / originalStats.size) * 100).toFixed(1);
     
-    console.log('✅ Logo optimized successfully!');
+    console.log('✅ Logo optimized and trimmed successfully!');
     console.log(`📊 Original size: ${originalSize}MB`);
     console.log(`📊 Optimized size: ${optimizedSize}KB`);
     console.log(`💰 Size reduction: ${savings}%`);
+    console.log('✂️ Background whitespace automatically trimmed');
     
   } catch (error) {
     console.error('❌ Error optimizing logo:', error.message);

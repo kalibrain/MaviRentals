@@ -56,40 +56,40 @@ export default function Home() {
       <header 
         className={`sticky-header fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           headerScrolled 
-            ? 'bg-white/95 backdrop-blur-sm shadow-lg' 
-            : 'bg-white/95 backdrop-blur-sm'
+            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+            : 'bg-white/90 backdrop-blur-sm'
         }`}
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Logo size="md" className="cursor-pointer" />
+              <Logo size="sm" showText={false} className="cursor-pointer" />
             </div>
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
               <button 
                 onClick={() => scrollToSection('about')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 About Us
               </button>
               <button 
                 onClick={() => scrollToSection('how')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 How It Works
               </button>
               <button 
                 onClick={() => scrollToSection('benefits')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 Benefits
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
               >
                 Contact
               </button>
@@ -99,7 +99,7 @@ export default function Home() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden text-gray-700 hover:bg-gray-100"
               onClick={() => setMobileMenuOpen(true)}
             >
               <i className="fas fa-bars text-xl"></i>
@@ -113,7 +113,7 @@ export default function Home() {
         <SheetContent side="left" className="w-4/5">
           <SheetHeader>
             <SheetTitle className="text-xl font-bold text-primary text-left">
-              <Logo size="sm" />
+              <Logo size="md" showText={false} />
             </SheetTitle>
           </SheetHeader>
           <nav className="space-y-6 mt-8">
