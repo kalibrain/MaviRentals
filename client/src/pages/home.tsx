@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
+import { Logo } from "@/components/Logo";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,7 +64,7 @@ export default function Home() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-xl md:text-2xl font-bold text-primary">Mavi Rentals LLC</h1>
+              <Logo size="md" className="cursor-pointer" />
             </div>
             
             {/* Desktop Navigation */}
@@ -111,7 +112,9 @@ export default function Home() {
       <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
         <SheetContent side="left" className="w-4/5">
           <SheetHeader>
-            <SheetTitle className="text-xl font-bold text-primary text-left">Mavi Rentals LLC</SheetTitle>
+            <SheetTitle className="text-xl font-bold text-primary text-left">
+              <Logo size="sm" />
+            </SheetTitle>
           </SheetHeader>
           <nav className="space-y-6 mt-8">
             <button 
